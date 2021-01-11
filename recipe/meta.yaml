@@ -1,4 +1,4 @@
-{% set version = "3.18.4" %}
+{% set version = "3.18.5" %}
 
 package:
   name: cmake
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://gitlab.kitware.com/cmake/cmake/-/archive/v{{ version }}/cmake-v{{ version }}.tar.bz2
-  sha256: edfa9004e7fe32b29ca122b2c158e3e044a2f54df3053f5129f85cc5472ebf53
+  sha256: 54563540df0413103c0ac2a37e5f8062612cb16ffab6abf0f7c76677a5f4452a
   # Not until Python 3.8 on Windows: https://github.com/WorksApplications/SudachiPy/issues/107#issuecomment-564510365
   # path: 'C:/opt/Shared.local/src/cmake'
   # path_via_symlink: True
@@ -24,8 +24,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}=7.5
+    - {{ compiler('cxx') }}=7.5
     - make            # [unix]
     - patch           # [not win]
     - m2-patch        # [win]
