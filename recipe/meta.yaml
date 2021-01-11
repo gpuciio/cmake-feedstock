@@ -24,8 +24,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}=7.5
-    - {{ compiler('cxx') }}=7.5
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - make            # [unix]
     - patch           # [not win]
     - m2-patch        # [win]
